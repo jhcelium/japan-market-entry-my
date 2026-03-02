@@ -11,6 +11,8 @@ export type FAQ = {
 export type CTA = {
   label: string;
   href: string;
+  /** Optional routing note — displayed nowhere, used as inline documentation */
+  note?: string;
 };
 
 export type SiteConfig = {
@@ -54,16 +56,16 @@ export const SITE_PRESETS: Record<string, SiteConfig> = {
   // ── 1 ──────────────────────────────────────────────────────
   "japan-market-entry": {
     domain: "japan-market-entry.neoidigital.com",
-    siteName: "Japan Market Entry",
-    brandLine: "Structured market entry for Malaysian companies entering Japan.",
+    siteName: "NeoiDigital",
+    brandLine: "Japan Market Entry",
     primaryIntent:
-      "We help Malaysian SMEs navigate Japan's B2B market with a repeatable, risk-managed entry process.",
+      "Practical market entry support for Malaysia SMEs entering Japan—strategy, risk checks, and distributor selection.",
     mainKeywords: [
       "japan market entry",
       "japan market entry consulting for malaysian companies",
     ],
     supportingKeywords: [
-      "enter japan market",
+      "enter the Japan market",
       "japan business entry support",
       "japan market entry strategy",
       "japan b2b market entry",
@@ -76,47 +78,63 @@ export const SITE_PRESETS: Record<string, SiteConfig> = {
       "japan market entry consulting firm in japan",
       "malaysia company expanding to japan step by step",
       "japan market entry risk and distributor selection",
-      "japan b2b market entry support kasugai aichi",
+      "japan b2b market entry support osaka",
     ],
     primaryCTA: {
-      label: "Start Your Japan Market Entry",
-      href: "mailto:hello@neoidigital.com?subject=Japan Market Entry Inquiry",
+      label: "Request a qualification call",
+      href: "https://www.japan-market.neoidigital.com/",
+      note: "You will be routed to the hub intake.",
     },
     hubLink: HUB_LINK,
     company: "NeoiDigital",
     localPresence: true,
     socialProofBullets: [
-      "Japan-based coordinator in Kasugai, Aichi",
-      "Direct distributor network across key product categories",
-      "Structured 4-phase entry process for B2B markets",
-      "Malaysia–Japan bilingual communication support",
-      "Hands-on trade show follow-up and meeting facilitation",
+      "A distributor-first structure for japan market entry.",
+      "Early regulatory and labeling risk checks aligned with Japan import requirements.",
+      "Trade-show preparation support for companies entering Japan through exhibitions.",
+      "Osaka-based coordination to support distributor meetings and on-the-ground follow-up.",
+      "Clear written deliverables to support executive decision-making.",
     ],
     faq: [
       {
-        question: "How long does Japan market entry typically take for a Malaysian SME?",
+        question: "What does a Japan market entry plan include?",
         answer:
-          "A realistic first-phase timeline is 6–12 months, covering market assessment, distributor identification, initial meetings, and contract preparation. Timeline varies by product category and regulatory requirements.",
+          "A japan market entry strategy covers market feasibility, distributor shortlisting, regulatory and labeling requirements, channel structure, and a phased action plan with defined milestones.",
       },
       {
-        question: "What does 'market entry support' include?",
+        question: "How do you help Malaysia SMEs reduce entry risk?",
         answer:
-          "It includes market feasibility assessment, distributor shortlisting, introductory meeting facilitation, proposal support, and post-meeting follow-up coordination.",
+          "We run an entry risk check early—covering regulatory fit, buyer expectations, pricing gaps, and channel readiness—before any distributor outreach or trade-show commitment.",
       },
       {
-        question: "Does my product need Japanese regulatory approval before entering the market?",
+        question: "How do we find the right distributor in Japan?",
         answer:
-          "It depends on the product category. Food, cosmetics, and medical devices have specific labelling and approval requirements. We assess these requirements during the initial evaluation.",
+          "Distributor selection in Japan starts with category fit, geographic coverage, and willingness to engage. We screen candidates and present a shortlist of 3–5 qualified names with a rationale for each.",
       },
       {
-        question: "Do you work with companies outside Malaysia?",
+        question: "What is the typical timeline from first contact to first deals?",
         answer:
-          "Our primary focus is Malaysian and ASEAN-based companies. We have the deepest experience with the Malaysia–Japan corridor.",
+          "For companies exporting from Malaysia to Japan for the first time, a realistic first-phase range is 6–12 months. Timeline depends on product category, regulatory requirements, and distributor response pace.",
       },
       {
-        question: "What product categories do you have distributor connections for?",
+        question: "Do we need Japanese labels and compliance checks upfront?",
         answer:
-          "Food and beverage, health and wellness, industrial components, and select consumer goods. We confirm category fit during an initial consultation.",
+          "Yes for food, cosmetics, and medical devices. Labeling and compliance gaps are identified during the entry risk check so you know the requirements before committing resources.",
+      },
+      {
+        question: "Can trade shows be a primary entry channel?",
+        answer:
+          "They can be a useful channel with the right preparation. Without pre-booked meetings and a clear follow-up plan, trade shows often produce low-quality leads. We structure both.",
+      },
+      {
+        question: "Do you provide on-the-ground support in Japan?",
+        answer:
+          "Yes. Our coordinator is based in Osaka, Japan. We attend meetings, manage distributor follow-up, and maintain continuity between your Malaysia team and Japan-side contacts.",
+      },
+      {
+        question: "What should we prepare before the qualification call?",
+        answer:
+          "Bring a product specification or catalogue, your target customer type (retail, B2B, or wholesale), current pricing structure, and any certifications you hold. Specific inputs lead to specific feedback.",
       },
     ],
   },
@@ -537,5 +555,5 @@ export const SITE_PRESETS: Record<string, SiteConfig> = {
 // ============================================================
 // ACTIVE SITE — change only this line per sub-site repo
 // ============================================================
-export const ACTIVE_SITE_KEY = "export-to-japan";
+export const ACTIVE_SITE_KEY = "japan-market-entry";
 export const siteConfig: SiteConfig = SITE_PRESETS[ACTIVE_SITE_KEY];

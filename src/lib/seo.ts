@@ -24,8 +24,8 @@ export function orgJsonLd() {
     ...(siteConfig.localPresence && {
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Kasugai",
-        addressRegion: "Aichi",
+        addressLocality: "Osaka",
+        addressRegion: "Osaka",
         addressCountry: "JP",
       },
     }),

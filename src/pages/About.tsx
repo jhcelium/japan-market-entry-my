@@ -91,10 +91,10 @@ export default function About() {
             <div className="max-w-2xl space-y-4 text-sm text-neutral-700 leading-relaxed">
               <p>
                 Our Japan-side coordinator is based in{" "}
-                <strong className="text-neutral-900">Kasugai, Aichi Prefecture</strong> — within the Greater Nagoya industrial and commercial corridor, with access to Tokyo and Osaka.
+                <strong className="text-neutral-900">Osaka</strong> — a major commercial hub with direct access to distributors, buyers, and trade networks across the Kansai region.
               </p>
               <p>
-                Kasugai provides direct access to Japan's manufacturing heartland and serves as a practical base for meeting distributors, attending trade shows, and maintaining ongoing relationships without requiring our clients to relocate or establish a Japan entity.
+                Osaka provides a practical base for meeting distributors, attending trade shows, and maintaining ongoing relationships without requiring our clients to relocate or establish a Japan entity.
               </p>
               <p>
                 Our Malaysia-side coordination is conducted remotely, with structured reporting back to your team after each Japan-side engagement.

@@ -10,27 +10,27 @@ const HOW_WE_WORK = [
   {
     step: "1",
     title: "Initial Assessment",
-    body: "We review your product, pricing, certifications, and target channel to determine Japan market fit before any commitment.",
+    body: "Before committing resources, we assess product-market fit for Japan. This includes reviewing certifications, labeling readiness, pricing structure, and channel positioning within the Japan B2B market.",
   },
   {
     step: "2",
     title: "Market Mapping",
-    body: "We identify the relevant distributor categories, regulatory requirements, and trade channels specific to your product.",
+    body: "We map distributor categories and compliance requirements for your sector. Japan B2B market entry often stalls at channel selection—we structure this decision before any outreach begins.",
   },
   {
     step: "3",
     title: "Distributor Identification",
-    body: "We shortlist and approach qualified Japan-side partners using our established network and direct outreach.",
+    body: "As part of our japan market entry consulting for Malaysian companies, we shortlist and approach qualified Japan-side distributors based on category fit and geographic coverage.",
   },
   {
     step: "4",
     title: "Introduction & Meeting Support",
-    body: "We facilitate introductory meetings, prepare briefing materials, and provide bilingual support during discussions.",
+    body: "We coordinate introductions, prepare structured briefing materials, and provide bilingual facilitation during distributor discussions.",
   },
   {
     step: "5",
     title: "Follow-up Coordination",
-    body: "We maintain contact with distributors after initial meetings and coordinate next steps on your behalf.",
+    body: "Follow-up determines whether introductory meetings convert to commercial discussions. We maintain contact with shortlisted distributors and keep next-step expectations aligned on both sides.",
   },
 ];
 
@@ -51,10 +51,10 @@ export default function Home() {
             {siteConfig.domain}
           </p>
           <h1 className="text-3xl font-semibold text-neutral-900 leading-tight mb-4">
-            {siteConfig.siteName}
+            {siteConfig.brandLine}
           </h1>
           <p className="text-lg text-neutral-600 mb-3 leading-relaxed">
-            {siteConfig.brandLine}
+            We provide structured Japan market entry support for Malaysian SMEs—covering strategy, risk checks, and distributor selection for Japan B2B expansion.
           </p>
           <p className="text-sm text-neutral-500 leading-relaxed mb-8">
             {siteConfig.primaryIntent}
@@ -84,7 +84,7 @@ export default function Home() {
                 Primary Intent
               </p>
               <p className="text-sm text-neutral-800 leading-relaxed">
-                {siteConfig.primaryIntent}
+                Our work focuses on practical japan market entry strategy and execution. This includes evaluating distributor structure, identifying regulatory exposure, and planning phased expansion into Japan.
               </p>
             </div>
             <div className="border-l-2 border-neutral-300 pl-4">
@@ -92,7 +92,7 @@ export default function Home() {
                 Who We Serve
               </p>
               <p className="text-sm text-neutral-600 leading-relaxed">
-                Malaysian and ASEAN-based SMEs and exporters looking to enter the Japan B2B market.
+                We work with Malaysian exporters and ASEAN-based SMEs looking to enter the Japan market through B2B channels, distributor partnerships, or trade exhibitions.
               </p>
             </div>
             {siteConfig.localPresence && (
@@ -101,7 +101,7 @@ export default function Home() {
                   Where We Operate
                 </p>
                 <p className="text-sm text-neutral-600 leading-relaxed">
-                  Japan-based coordinator in Kasugai, Aichi — supporting meetings, distributor visits, and on-the-ground follow-up.
+                  Japan-based coordination in Osaka, Japan — supporting distributor meetings, trade-show follow-up, and on-the-ground relationship continuity.
                 </p>
               </div>
             )}
