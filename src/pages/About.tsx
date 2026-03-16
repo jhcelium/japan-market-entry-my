@@ -29,7 +29,7 @@ export default function About() {
 
   return (
     <>
-      <SEOHead path="/about" title={title} description={description} />
+      <SEOHead path="/about" title={title} description={description} leadText={siteConfig.primaryIntent} />
 
       <main className="max-w-5xl mx-auto px-6 py-16 space-y-16">
 
@@ -41,7 +41,7 @@ export default function About() {
           <h1 className="text-3xl font-semibold text-neutral-900 leading-tight mb-4">
             NeoiDigital — Japan Market Entry Support
           </h1>
-          <p className="text-base text-neutral-600 leading-relaxed">
+          <p className="text-base text-neutral-600 leading-relaxed" data-speakable>
             {siteConfig.primaryIntent}
           </p>
         </section>
