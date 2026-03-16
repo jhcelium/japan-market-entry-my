@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 import SEOHead from "../components/SEOHead";
 import FAQList from "../components/FAQList";
 import CTA from "../components/CTA";
 import { siteConfig } from "../content/site.config";
-import { pageTitle } from "../lib/seo";
 
 export default function FAQ() {
-  const title = pageTitle("FAQ");
-  const description = `Frequently asked questions about ${siteConfig.siteName}. ${siteConfig.primaryIntent}`;
+  const title = "Japan Market Entry FAQ | Questions from Malaysian SMEs";
+  const description =
+    "Common questions about Japan market entry for Malaysian companies — covering strategy, distributor selection, compliance, trade shows, timeline, and on-the-ground support.";
 
   return (
     <>
@@ -20,10 +21,10 @@ export default function FAQ() {
             FAQ
           </p>
           <h1 className="text-3xl font-semibold text-neutral-900 leading-tight mb-4">
-            Frequently Asked Questions
+            Japan Market Entry — Common Questions
           </h1>
           <p className="text-base text-neutral-600 leading-relaxed">
-            Common questions about {siteConfig.siteName.toLowerCase()} and how we work with Malaysian exporters entering the Japan market.
+            Questions from Malaysian exporters and SMEs about entering the Japan B2B market — answered directly, without padding.
           </p>
         </section>
 
@@ -38,8 +39,15 @@ export default function FAQ() {
             <h2 className="text-xl font-semibold text-neutral-900 mb-3">
               Have a question not answered here?
             </h2>
-            <p className="text-sm text-neutral-500 mb-6 leading-relaxed">
+            <p className="text-sm text-neutral-500 mb-3 leading-relaxed">
               Reach out directly. We respond to all enquiries within one business day.
+            </p>
+            <p className="text-sm text-neutral-500 mb-6">
+              Or return to the{" "}
+              <Link to="/" className="underline underline-offset-2 hover:text-neutral-900">
+                Japan market entry overview
+              </Link>{" "}
+              to see how we work.
             </p>
             <CTA />
           </div>

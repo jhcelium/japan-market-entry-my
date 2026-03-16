@@ -1,7 +1,7 @@
+import { Link } from "react-router-dom";
 import SEOHead from "../components/SEOHead";
 import CTA from "../components/CTA";
 import { siteConfig } from "../content/site.config";
-import { pageTitle } from "../lib/seo";
 
 const DELIVERABLES = [
   {
@@ -23,8 +23,9 @@ const DELIVERABLES = [
 ];
 
 export default function About() {
-  const title = pageTitle("About");
-  const description = `About ${siteConfig.siteName}. We help Malaysian exporters and SMEs enter the Japan B2B market through structured market entry support.`;
+  const title = "About NeoiDigital | Japan Market Entry Support for Malaysian SMEs";
+  const description =
+    "NeoiDigital provides Japan market entry consulting for Malaysian companies. Osaka-based coordination covering distributor search, entry risk checks, and trade show support.";
 
   return (
     <>
@@ -38,7 +39,7 @@ export default function About() {
             About
           </p>
           <h1 className="text-3xl font-semibold text-neutral-900 leading-tight mb-4">
-            {siteConfig.siteName}
+            NeoiDigital — Japan Market Entry Support
           </h1>
           <p className="text-base text-neutral-600 leading-relaxed">
             {siteConfig.primaryIntent}
@@ -59,6 +60,13 @@ export default function About() {
             </p>
             <p>
               We also work with ASEAN-based companies seeking the Malaysia–Japan trade corridor as their first developed-market entry.
+            </p>
+            <p>
+              For a full overview of the entry process,{" "}
+              <Link to="/" className="underline underline-offset-2 hover:text-neutral-900">
+                see the Japan market entry page
+              </Link>
+              .
             </p>
           </div>
         </section>

@@ -99,42 +99,42 @@ export const SITE_PRESETS: Record<string, SiteConfig> = {
       {
         question: "What does a Japan market entry plan include?",
         answer:
-          "A japan market entry strategy covers market feasibility, distributor shortlisting, regulatory and labeling requirements, channel structure, and a phased action plan with defined milestones.",
+          "A Japan market entry plan covers five areas: market feasibility review, distributor shortlisting, regulatory and labeling requirements, channel structure, and a phased milestone plan. Each component feeds into the next.",
       },
       {
         question: "How do you help Malaysia SMEs reduce entry risk?",
         answer:
-          "We run an entry risk check early—covering regulatory fit, buyer expectations, pricing gaps, and channel readiness—before any distributor outreach or trade-show commitment.",
+          "We run an entry risk check before any distributor outreach—covering regulatory fit, buyer expectations, pricing gaps, and channel readiness. This prevents late-stage surprises and wasted introductions.",
       },
       {
         question: "How do we find the right distributor in Japan?",
         answer:
-          "Distributor selection in Japan starts with category fit, geographic coverage, and willingness to engage. We screen candidates and present a shortlist of 3–5 qualified names with a rationale for each.",
+          "Distributor selection in Japan starts with category fit, geographic coverage, and confirmed willingness to engage. We screen candidates and present a shortlist of 3–5 qualified names, each with a written rationale.",
       },
       {
         question: "What is the typical timeline from first contact to first deals?",
         answer:
-          "For companies exporting from Malaysia to Japan for the first time, a realistic first-phase range is 6–12 months. Timeline depends on product category, regulatory requirements, and distributor response pace.",
+          "For Malaysian companies entering Japan for the first time, a realistic first-phase range is 6–12 months. The main variables are product category, regulatory requirements, and distributor response pace.",
       },
       {
         question: "Do we need Japanese labels and compliance checks upfront?",
         answer:
-          "Yes for food, cosmetics, and medical devices. Labeling and compliance gaps are identified during the entry risk check so you know the requirements before committing resources.",
+          "Yes, for food, cosmetics, and medical devices. Japanese labeling requirements are strict. We identify labeling and compliance gaps during the initial risk check so you know exactly what is required before committing resources.",
       },
       {
         question: "Can trade shows be a primary entry channel?",
         answer:
-          "They can be a useful channel with the right preparation. Without pre-booked meetings and a clear follow-up plan, trade shows often produce low-quality leads. We structure both.",
+          "Trade shows can be effective with the right preparation. Without pre-booked meetings and a structured follow-up plan, most show contacts go cold within two weeks. We plan both the preparation and the follow-up.",
       },
       {
         question: "Do you provide on-the-ground support in Japan?",
         answer:
-          "Yes. Our coordinator is based in Osaka, Japan. We attend meetings, manage distributor follow-up, and maintain continuity between your Malaysia team and Japan-side contacts.",
+          "Yes. Our coordinator is based in Osaka, Japan. We attend distributor meetings, manage follow-up, and maintain relationship continuity between your Malaysia team and Japan-side contacts.",
       },
       {
         question: "What should we prepare before the qualification call?",
         answer:
-          "Bring a product specification or catalogue, your target customer type (retail, B2B, or wholesale), current pricing structure, and any certifications you hold. Specific inputs lead to specific feedback.",
+          "Prepare a product specification or catalogue, your target customer type (retail, wholesale, or B2B), current pricing, and any certifications you hold. Specific inputs lead to specific, useful feedback.",
       },
     ],
   },

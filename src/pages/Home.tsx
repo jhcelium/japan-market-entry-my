@@ -4,7 +4,6 @@ import CTA from "../components/CTA";
 import KeywordBlock from "../components/KeywordBlock";
 import FAQList from "../components/FAQList";
 import { siteConfig } from "../content/site.config";
-import { pageTitle } from "../lib/seo";
 
 const HOW_WE_WORK = [
   {
@@ -35,8 +34,9 @@ const HOW_WE_WORK = [
 ];
 
 export default function Home() {
-  const title = pageTitle();
-  const description = `${siteConfig.brandLine} ${siteConfig.primaryIntent}`;
+  const title = "Japan Market Entry Consulting for Malaysian Companies | NeoiDigital";
+  const description =
+    "Structured Japan market entry support for Malaysian SMEs — strategy, entry risk checks, distributor selection, and on-the-ground coordination from Osaka, Japan.";
   const faqPreview = siteConfig.faq.slice(0, 3);
 
   return (
@@ -145,6 +145,27 @@ export default function Home() {
           </ul>
         </section>
 
+        {/* What this page covers */}
+        <section className="border-t border-neutral-200 pt-10">
+          <h2 className="text-xs font-semibold tracking-widest text-neutral-400 uppercase mb-4">
+            What This Page Covers
+          </h2>
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 max-w-2xl">
+            {[
+              "Japan market entry process for Malaysian B2B companies",
+              "Distributor identification and channel structure",
+              "Entry risk checks: regulatory, labeling, and pricing",
+              "Trade show preparation and structured follow-up",
+              "On-the-ground coordination from Osaka, Japan",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-2">
+                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 bg-neutral-400" />
+                <span className="text-sm text-neutral-600">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
         {/* Keyword Cluster */}
         <KeywordBlock />
 
@@ -178,8 +199,14 @@ export default function Home() {
             <h2 className="text-xl font-semibold text-neutral-900 mb-3">
               Ready to evaluate your Japan market options?
             </h2>
-            <p className="text-sm text-neutral-500 mb-6 leading-relaxed">
+            <p className="text-sm text-neutral-500 mb-3 leading-relaxed">
               We work with Malaysian SMEs at different stages of Japan market readiness. The first step is a direct conversation about your product, pricing, and target channel.
+            </p>
+            <p className="text-sm text-neutral-500 mb-6">
+              Have specific questions first?{" "}
+              <Link to="/faq" className="underline underline-offset-2 hover:text-neutral-900">
+                See common questions from Malaysian exporters →
+              </Link>
             </p>
             <CTA />
           </div>

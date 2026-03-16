@@ -18,9 +18,11 @@ export function orgJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `https://${siteConfig.domain}/#organization`,
     name: siteConfig.company,
     url: `https://${siteConfig.domain}`,
     description: siteConfig.primaryIntent,
+    sameAs: [siteConfig.hubLink],
     ...(siteConfig.localPresence && {
       address: {
         "@type": "PostalAddress",
