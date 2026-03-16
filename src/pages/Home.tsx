@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import SEOHead from "../components/SEOHead";
 import CTA from "../components/CTA";
 import KeywordBlock from "../components/KeywordBlock";
 import FAQList from "../components/FAQList";
 import { siteConfig } from "../content/site.config";
+import { definedTermSetJsonLd } from "../lib/seo";
 
 const HOW_WE_WORK = [
   {
@@ -33,6 +35,9 @@ const HOW_WE_WORK = [
   },
 ];
 
+const LEAD_TEXT =
+  "We provide structured Japan market entry support for Malaysian SMEs—covering strategy, risk checks, and distributor selection for Japan B2B expansion.";
+
 export default function Home() {
   const title = "Japan Market Entry Consulting for Malaysian Companies | NeoiDigital";
   const description =
@@ -41,7 +46,12 @@ export default function Home() {
 
   return (
     <>
-      <SEOHead path="/" title={title} description={description} />
+      <SEOHead path="/" title={title} description={description} isHowTo leadText={LEAD_TEXT} />
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(definedTermSetJsonLd())}
+        </script>
+      </Helmet>
 
       <main className="max-w-5xl mx-auto px-6 py-16 space-y-20">
 
@@ -53,7 +63,7 @@ export default function Home() {
           <h1 className="text-3xl font-semibold text-neutral-900 leading-tight mb-4">
             {siteConfig.brandLine}
           </h1>
-          <p className="text-lg text-neutral-600 mb-3 leading-relaxed">
+          <p className="text-lg text-neutral-600 mb-3 leading-relaxed" data-speakable>
             We provide structured Japan market entry support for Malaysian SMEs—covering strategy, risk checks, and distributor selection for Japan B2B expansion.
           </p>
           <p className="text-sm text-neutral-500 leading-relaxed mb-8">
@@ -190,6 +200,26 @@ export default function Home() {
             >
               View All {siteConfig.faq.length} Questions →
             </Link>
+          </div>
+        </section>
+
+        {/* Regulatory framework */}
+        <section className="border-t border-neutral-200 pt-10">
+          <h2 className="text-xs font-semibold tracking-widest text-neutral-400 uppercase mb-4">
+            Regulatory Context
+          </h2>
+          <div className="max-w-2xl space-y-3 text-sm text-neutral-600 leading-relaxed">
+            <p>
+              Product entry into Japan is governed by sector-specific regulations.
+              The <strong className="text-neutral-800">Ministry of Health, Labour and Welfare (MHLW)</strong> oversees food safety, cosmetics, and pharmaceutical imports under the Food Sanitation Act and the Pharmaceutical and Medical Device Act.
+            </p>
+            <p>
+              The <strong className="text-neutral-800">Consumer Affairs Agency (CAA)</strong> enforces Japan's Food Labelling Standards, which require ingredient lists, allergen declarations, and nutritional information — all in Japanese.
+            </p>
+            <p>
+              For tariff-related matters, the <strong className="text-neutral-800">Japan Customs (Ministry of Finance)</strong> administers import duties and the Malaysia–Japan EPA preferential tariff framework.
+              A licensed importer of record in Japan is required for all commercial imports.
+            </p>
           </div>
         </section>
 

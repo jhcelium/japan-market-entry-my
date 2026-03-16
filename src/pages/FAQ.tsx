@@ -11,7 +11,13 @@ export default function FAQ() {
 
   return (
     <>
-      <SEOHead path="/faq" title={title} description={description} isFaq={true} />
+      <SEOHead
+        path="/faq"
+        title={title}
+        description={description}
+        isFaq
+        leadText="Questions from Malaysian exporters and SMEs about entering the Japan B2B market — answered directly, without padding."
+      />
 
       <main className="max-w-5xl mx-auto px-6 py-16 space-y-12">
 
@@ -23,7 +29,7 @@ export default function FAQ() {
           <h1 className="text-3xl font-semibold text-neutral-900 leading-tight mb-4">
             Japan Market Entry — Common Questions
           </h1>
-          <p className="text-base text-neutral-600 leading-relaxed">
+          <p className="text-base text-neutral-600 leading-relaxed" data-speakable>
             Questions from Malaysian exporters and SMEs about entering the Japan B2B market — answered directly, without padding.
           </p>
         </section>
