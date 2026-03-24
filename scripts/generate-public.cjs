@@ -34,7 +34,8 @@ if (keyIndex === -1) {
 // Slice from the key to a reasonable preset block end
 const blockStart = keyIndex;
 // Find the matching closing brace for this preset (heuristic: next top-level "," + newline + 2 spaces)
-const rawBlock = src.slice(blockStart, blockStart + 4000);
+// Large slice: FAQ assets add many lines; must include every slug: "..." in the active preset
+const rawBlock = src.slice(blockStart, blockStart + 32000);
 
 // ── Extract domain ────────────────────────────────────────────
 const domainMatch = rawBlock.match(/domain\s*:\s*["']([^"']+)["']/);
@@ -52,8 +53,19 @@ const baseUrl = "https://" + domain;
 const pages = [
   { path: "/",      changefreq: "weekly",  priority: "1.0" },
   { path: "/about", changefreq: "monthly", priority: "0.8" },
-  { path: "/faq",   changefreq: "monthly", priority: "0.8" },
+  { path: "/faq",   changefreq: "weekly",  priority: "0.9" },
 ];
+
+// FAQ answer assets: slug: "..." inside active preset block
+const slugRe = /slug:\s*"([^"]+)"/g;
+let sm;
+while ((sm = slugRe.exec(rawBlock)) !== null) {
+  pages.push({
+    path: "/faq/" + sm[1],
+    changefreq: "monthly",
+    priority: "0.75",
+  });
+}
 
 const sitemap = [
   '<?xml version="1.0" encoding="UTF-8"?>',

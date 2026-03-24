@@ -3,9 +3,26 @@
 // ONE-FILE CONFIGURATION — edit only this file per sub-site
 // ============================================================
 
+/** FAQ group key for hub section grouping (optional on legacy presets) */
+export type FaqGroup =
+  | "strategy"
+  | "risk"
+  | "compliance"
+  | "distributors"
+  | "execution";
+
 export type FAQ = {
   question: string;
   answer: string;
+  /** URL segment for /faq/:slug answer pages */
+  slug?: string;
+  /** 1–2 sentences for hub index and home preview */
+  preview?: string;
+  group?: FaqGroup;
+  whyItMatters?: string;
+  keyFactors?: string[];
+  commonMistakes?: string[];
+  relatedSlugs?: string[];
 };
 
 export type CTA = {
@@ -97,44 +114,176 @@ export const SITE_PRESETS: Record<string, SiteConfig> = {
     ],
     faq: [
       {
+        slug: "japan-market-entry-plan",
+        group: "strategy",
         question: "What does a Japan market entry plan include?",
+        preview:
+          "A plan covers feasibility, distributor shortlisting, regulatory and labeling requirements, channel structure, and phased milestones.",
         answer:
           "A Japan market entry plan covers five areas: market feasibility review, distributor shortlisting, regulatory and labeling requirements, channel structure, and a phased milestone plan. Each component feeds into the next.",
+        whyItMatters:
+          "A bounded plan keeps Malaysia-side teams aligned on scope, spend, and sequencing before Japan-side introductions begin.",
+        keyFactors: [
+          "Market feasibility and category timing for your SKU",
+          "Distributor targets matched to geography and channel type",
+          "Regulatory and labeling requirements by product class",
+          "Milestone plan with explicit assumptions and review points",
+        ],
+        commonMistakes: [
+          "Starting distributor outreach before pricing and compliance gaps are understood",
+          "Treating a single exhibition visit as a complete entry strategy",
+        ],
+        relatedSlugs: ["reduce-entry-risk-malaysia-smes", "find-distributor-japan"],
       },
       {
+        slug: "reduce-entry-risk-malaysia-smes",
+        group: "risk",
         question: "How do you help Malaysia SMEs reduce entry risk?",
+        preview:
+          "We run an entry risk check before outreach—regulatory fit, buyer expectations, pricing gaps, and channel readiness.",
         answer:
           "We run an entry risk check before any distributor outreach—covering regulatory fit, buyer expectations, pricing gaps, and channel readiness. This prevents late-stage surprises and wasted introductions.",
+        whyItMatters:
+          "Early gaps in labeling, pricing, or channel fit surface as stalled deals or withdrawn interest after costly meetings.",
+        keyFactors: [
+          "Regulatory and labeling fit for your product category",
+          "Buyer expectations on specs, service levels, and lead times",
+          "Pricing structure versus Japan landed cost and channel margin",
+          "Channel readiness before any distributor or trade-show commitment",
+        ],
+        commonMistakes: [
+          "Assuming Malaysian certifications transfer without Japan-specific checks",
+          "Committing to booth costs before confirming importer and category route",
+        ],
+        relatedSlugs: ["japanese-labels-compliance-upfront", "japan-market-entry-plan"],
       },
       {
+        slug: "find-distributor-japan",
+        group: "distributors",
         question: "How do we find the right distributor in Japan?",
+        preview:
+          "Selection starts with category fit, coverage, and willingness to engage; you get a shortlist of 3–5 names with rationale.",
         answer:
           "Distributor selection in Japan starts with category fit, geographic coverage, and confirmed willingness to engage. We screen candidates and present a shortlist of 3–5 qualified names, each with a written rationale.",
+        whyItMatters:
+          "The wrong distributor burns time on introductions that never convert; fit matters more than contact volume.",
+        keyFactors: [
+          "Category alignment and existing portfolio overlap",
+          "Geographic coverage versus your target region or channel",
+          "Operational capacity for MOQ, logistics, and after-sales expectations",
+          "Documented willingness to engage before formal introduction",
+        ],
+        commonMistakes: [
+          "Prioritising the largest distributor without category focus",
+          "Skipping written qualification before flying in for meetings",
+        ],
+        relatedSlugs: ["trade-shows-entry-channel", "on-ground-support-japan-osaka"],
       },
       {
+        slug: "timeline-first-deals-japan",
+        group: "strategy",
         question: "What is the typical timeline from first contact to first deals?",
+        preview:
+          "First-phase work often spans 6–12 months, driven by category, compliance, and distributor response pace.",
         answer:
           "For Malaysian companies entering Japan for the first time, a realistic first-phase range is 6–12 months. The main variables are product category, regulatory requirements, and distributor response pace.",
+        whyItMatters:
+          "Realistic timing protects cash flow and internal stakeholder expectations in both Malaysia and Japan.",
+        keyFactors: [
+          "Product category and depth of compliance work",
+          "Speed of distributor screening and meeting cycles",
+          "Contract and sampling steps before first commercial orders",
+        ],
+        commonMistakes: [
+          "Expecting closed deals within one short visit",
+          "Pausing follow-up after a single non-response from a candidate",
+        ],
+        relatedSlugs: ["prepare-qualification-call", "japan-market-entry-plan"],
       },
       {
+        slug: "japanese-labels-compliance-upfront",
+        group: "compliance",
         question: "Do we need Japanese labels and compliance checks upfront?",
+        preview:
+          "Yes for food, cosmetics, and medical devices: Japanese labeling rules are strict; gaps should be mapped early.",
         answer:
           "Yes, for food, cosmetics, and medical devices. Japanese labeling requirements are strict. We identify labeling and compliance gaps during the initial risk check so you know exactly what is required before committing resources.",
+        whyItMatters:
+          "Non-compliant labels block listing and import; fixing them late delays revenue and erodes distributor trust.",
+        keyFactors: [
+          "Applicable acts and agencies for your product class",
+          "Mandatory Japanese label elements and allergen rules",
+          "Importer-of-record and notification steps where relevant",
+        ],
+        commonMistakes: [
+          "Using English-only packaging for retail-bound consumer goods",
+          "Assuming halal or other marks replace Japan-specific requirements",
+        ],
+        relatedSlugs: ["reduce-entry-risk-malaysia-smes", "find-distributor-japan"],
       },
       {
+        slug: "trade-shows-entry-channel",
+        group: "distributors",
         question: "Can trade shows be a primary entry channel?",
+        preview:
+          "They can work with pre-booked meetings and disciplined follow-up; without that, most leads go cold quickly.",
         answer:
           "Trade shows can be effective with the right preparation. Without pre-booked meetings and a structured follow-up plan, most show contacts go cold within two weeks. We plan both the preparation and the follow-up.",
+        whyItMatters:
+          "Trade shows concentrate buyer and distributor attention; execution quality determines whether that converts to pipeline.",
+        keyFactors: [
+          "Pre-show targeting and meeting booking where possible",
+          "Clear booth messaging aligned to Japan buyer expectations",
+          "Post-show follow-up owner, timeline, and materials in Japanese as needed",
+        ],
+        commonMistakes: [
+          "Collecting cards without same-week structured follow-up",
+          "No single qualified distributor hypothesis before the show",
+        ],
+        relatedSlugs: ["find-distributor-japan", "on-ground-support-japan-osaka"],
       },
       {
+        slug: "on-ground-support-japan-osaka",
+        group: "execution",
         question: "Do you provide on-the-ground support in Japan?",
+        preview:
+          "Yes. Osaka-based coordination for meetings, follow-up, and continuity between your Malaysia team and Japan contacts.",
         answer:
           "Yes. Our coordinator is based in Osaka, Japan. We attend distributor meetings, manage follow-up, and maintain relationship continuity between your Malaysia team and Japan-side contacts.",
+        whyItMatters:
+          "Japan B2B relationships depend on reliable, timely local presence; gaps in follow-up are read as low commitment.",
+        keyFactors: [
+          "Meeting attendance and structured notes back to your team",
+          "Ongoing distributor communication between visits",
+          "Alignment on next steps after each engagement",
+        ],
+        commonMistakes: [
+          "Relying only on email from Malaysia without local continuity",
+          "Underestimating follow-up cadence after first meetings",
+        ],
+        relatedSlugs: ["find-distributor-japan", "trade-shows-entry-channel"],
       },
       {
+        slug: "prepare-qualification-call",
+        group: "strategy",
         question: "What should we prepare before the qualification call?",
+        preview:
+          "Bring product specs, target channel type, pricing, and certifications so feedback can be specific.",
         answer:
           "Prepare a product specification or catalogue, your target customer type (retail, wholesale, or B2B), current pricing, and any certifications you hold. Specific inputs lead to specific, useful feedback.",
+        whyItMatters:
+          "The qualification call routes you to the right next step; vague inputs produce generic guidance only.",
+        keyFactors: [
+          "Product specification or catalogue in shareable form",
+          "Target channel and geography within Japan",
+          "Current pricing, MOQ, and lead time assumptions",
+          "Existing certifications and export experience",
+        ],
+        commonMistakes: [
+          "Arriving without pricing or MOQ boundaries",
+          "Omitting known regulatory constraints for your category",
+        ],
+        relatedSlugs: ["timeline-first-deals-japan", "reduce-entry-risk-malaysia-smes"],
       },
     ],
   },

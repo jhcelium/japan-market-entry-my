@@ -192,7 +192,10 @@ export default function Home() {
               All FAQs →
             </Link>
           </div>
-          <FAQList items={faqPreview} />
+          <p className="text-sm text-neutral-600 mb-6 max-w-2xl leading-relaxed">
+            The FAQ hub gives direct answers on market entry planning, entry risk, distributor selection, Japanese labels and compliance, trade shows, timelines, and on-the-ground execution from Osaka.
+          </p>
+          <FAQList items={faqPreview} showAnswerLinks />
           <div className="mt-6">
             <Link
               to="/faq"

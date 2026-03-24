@@ -118,6 +118,26 @@ export function faqPageJsonLd(leadText?: string) {
   };
 }
 
+/** JSON-LD: FAQPage — single Q&A (answer asset page) */
+export function faqSinglePageJsonLd(question: string, answer: string, path: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${BASE_URL}${path}#faq`,
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: answer,
+        },
+      },
+    ],
+    speakableSpecification: speakable(["h1", "[data-speakable]"]),
+  };
+}
+
 /** JSON-LD: HowTo — from the 5-step process on Home */
 export function howToJsonLd() {
   return {
