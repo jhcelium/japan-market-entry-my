@@ -114,6 +114,30 @@ export const SITE_PRESETS: Record<string, SiteConfig> = {
     ],
     faq: [
       {
+        slug: "what-is-japan-market-entry",
+        group: "strategy",
+        question: "What Is Japan Market Entry?",
+        preview:
+          "Japan market entry is the structured work of selling through Japan’s B2B channels—regulatory preparation, localization, distributor selection, and local follow-up.",
+        answer:
+          "Japan market entry is the structured process of placing a product or service into Japan’s B2B economy: validating category fit, completing regulatory preparation, localizing labeling and commercial materials for Japanese buyers, running distributor selection against clear channel criteria, and sustaining local follow-up until repeatable commercial traction is realistic.",
+        whyItMatters:
+          "Treat it as a chain, not a slogan: weak regulatory preparation, shallow localization, or absent local follow-up each show up as stalled listings, customs holds, or distributors who stop responding.",
+        keyFactors: [
+          "Market feasibility: category fit, landed pricing, and a credible channel hypothesis for Japan",
+          "Regulatory preparation: product-class rules, notifications, and compliant labeling before volume commitments",
+          "Localization: Japanese-language labels, specifications, and buyer-facing materials—not translation alone",
+          "Distributor selection: shortlisting partners by category, geography, capacity, and confirmed willingness to engage",
+          "Local follow-up: disciplined post-meeting actions, samples, and relationship continuity from Japan",
+        ],
+        commonMistakes: [
+          "Equating marketing translation with localization while omitting mandatory regulatory label content",
+          "Prioritising distributor size over fit, then discovering no internal champion for your category",
+          "Flying in for meetings without a named owner for ongoing local follow-up",
+        ],
+        relatedSlugs: ["japan-market-entry-plan", "reduce-entry-risk-malaysia-smes", "find-distributor-japan"],
+      },
+      {
         slug: "japan-market-entry-plan",
         group: "strategy",
         question: "What does a Japan market entry plan include?",
@@ -133,7 +157,7 @@ export const SITE_PRESETS: Record<string, SiteConfig> = {
           "Starting distributor outreach before pricing and compliance gaps are understood",
           "Treating a single exhibition visit as a complete entry strategy",
         ],
-        relatedSlugs: ["reduce-entry-risk-malaysia-smes", "find-distributor-japan"],
+        relatedSlugs: ["what-is-japan-market-entry", "reduce-entry-risk-malaysia-smes", "find-distributor-japan"],
       },
       {
         slug: "reduce-entry-risk-malaysia-smes",
